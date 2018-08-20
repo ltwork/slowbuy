@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <script src='../lib/zepto/zepto.min.js'></script>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <script src='../lib/mui/js/mui.min.js'></script>
+    <script src='../lib/artTemplate/template-web.js'></script>
+
+    <!-- 自己的文件包 -->
+    <link rel="stylesheet" href="../css/discounts.css">
+    <script src='../js/common.js'></script>
+    <script src='../js/discounts.js'></script>
+
+
+</head>
+
+<body>
+    <!-- 国内折扣页面 -->
+    <div class="container">
+
+        <div class="header">
+            <div class="shortBar">
+                <a href="javascript:goback();" class='mui-icon mui-icon-back'></a>
+                <p class='title'>国内折扣</p>
+                <a href="javascript:;" class='download'>
+                    <img src="../images/download.png" alt="">
+                </a>
+            </div>
+            <div class="navBar">
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="navBarScroll">
+                    <div class="mui-scroll">
+
+                        <a href="#">首页</a>
+
+                        <a href="#">省钱控</a>
+
+                        <a href="#">比较搜索</a>
+
+                        <a href="#" class='active'>国内折扣</a>
+
+                        <a href="#">查看历史价</a>
+
+                        <a href="#">白菜价</a>
+
+                        <a href="#">小时风云榜</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中间内容部分 -->
+        <div class="main">
+            <div class="mui-scroll-wrapper" id='mainScroll'>
+                <div class="mui-scroll" id='mainScrollProduct'>
+                    
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="loginBar">
+                <a href="#" class='login'>登录</a>
+                <a href="#" class='regist'>注册</a>
+                <a href="#" id='goTop'>
+                    <img src="../images/top.jpg" alt="" class='goTop'>
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class='appDown'>
+                <p class='message'>
+                    <a href="#" class='mobile'>手机APP下载</a>
+                    <a href="#" class='palmar'>慢慢买手机版</a>
+                    <a href="#" class='platform'>--掌上比价平台</a>
+                </p>
+                <p class='href'>m.manmanbuy.com</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script type='text/html' id='createProduct'>
+    {{each result value key}}
+    {{if key>=pageStart && key<pageEnd}}
+    <div class="product">
+        <a href="./discountsMessage.html?productid={{value.productId}}">
+            <div class="pic">
+                <!-- <img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg" alt=""> -->
+                {{@value.productImg}}
+            </div>
+            <p class="title mui-ellipsis-2">{{value.productName}}</p>
+            <p class="price">{{value.productPrice}}</p>
+            <div>
+                <span class='productFrom'>{{value.productFrom}}</span>
+                <span class='productTime'>{{value.productTime}}</span>
+            </div>
+        </a>
+
+    </div>
+    {{/if}}
+    {{/each}}
+
+</script>

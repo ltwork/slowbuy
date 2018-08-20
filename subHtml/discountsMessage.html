@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品信息</title>
+    <script src='../lib/zepto/zepto.min.js'></script>
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <script src='../lib/mui/js/mui.min.js'></script>
+    <script src='../lib/artTemplate/template-web.js'></script>
+
+    <!-- 自己的文件包 -->
+    <link rel="stylesheet" href="../css/discountsMessage.css">
+    <script src='../js/common.js'></script>
+    <script src='../js/discountsMessage.js'></script>
+
+
+</head>
+
+<body>
+    <!-- 商品详细页面 -->
+    <div class="container">
+
+        <div class="header">
+            <div class="shortBar">
+                <a href="javascript:goback();" class='mui-icon mui-icon-back'></a>
+                <p class='title'>国内折扣</p>
+                <a href="javascript:;" class='download'>
+                    <img src="../images/download.png" alt="">
+                </a>
+            </div>
+            <div class="navBar">
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" id="navBarScroll">
+                    <div class="mui-scroll">
+
+                        <a href="#">首页</a>
+
+                        <a href="#">省钱控</a>
+
+                        <a href="#">比较搜索</a>
+
+                        <a href="#" class='active'>国内折扣</a>
+
+                        <a href="#">查看历史价</a>
+
+                        <a href="#">白菜价</a>
+
+                        <a href="#">小时风云榜</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 中间内容部分 -->
+        <div class="main">
+            <div class="mui-scroll-wrapper" id='mainScroll'>
+                <div class="mui-scroll" id='mainScrollProduct'>
+
+                    <!-- 中间内容部分 -->
+
+                    <!-- 模板生成 -->
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="loginBar">
+                <a href="#" class='login'>登录</a>
+                <a href="#" class='regist'>注册</a>
+                <a href="#" id='goTop'>
+                    <img src="../images/top.jpg" alt="" class='goTop'>
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class='appDown'>
+                <p class='message'>
+                    <a href="#" class='mobile'>手机APP下载</a>
+                    <a href="#" class='palmar'>慢慢买手机版</a>
+                    <a href="#" class='platform'>--掌上比价平台</a>
+                </p>
+                <p class='href'>m.manmanbuy.com</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script type='text/html' id='productMessageList'>
+    {{each result value key}}
+    <div class="title">{{value.productName}}</div>
+    <div class="usermessage">
+        <span class='productFrom'>{{value.productFrom}}</span>
+        <span class='productTime'>{{value.productTime}}</span>
+        <span class='productTips'>{{value.productTips}}</span>
+    </div>
+    <div class='info'>
+
+        <div class="mallPic">
+            {{@value.productImg}}
+        </div> {{value.productInfo}}
+    </div>
+    <div class="bigPic">
+        {{@value.productImg}}
+    </div>
+    <button class='btn'>前往购买</button>
+    <div class="code">
+        <img src="../images/mmbweixin2.png" alt="">
+    </div>
+    <div id='commit'>
+        {{@value.productComment}}
+    </div>
+
+    {{/each}}
+</script>
+
+<!-- <div class="title">Apple iPhone 6 64GB 金色 移动联通电信4G手机</div>
+    <div class="usermessage">
+        <span class='productFrom'>苏宁易购</span>
+        <span class='productTime'>10-22 13:29</span>
+        <span class='productTips'>zjie/ 慢慢买</span>
+    </div>
+    <div class='info'>
+
+        <img src="http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000123129054_1_200x200.jpg" alt=""> 64G果6，需要的可以入手。 苏宁自营，现在参加大聚惠，4088到手，不玩游戏用用蛮好的
+    </div>
+    <img src="http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000123129054_1_200x200.jpg" alt="" class='pic'>
+    <button class='btn'>前往购买</button>
+    <div class="code">
+        <img src="../images/mmbweixin2.png" alt="">
+    </div>
+    <div id='commit'>
+
+    </div> -->

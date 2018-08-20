@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海淘折扣页</title>
+
+
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/haitaozekou.js"></script>
+    <link rel="stylesheet" href="../css/haitaozekou.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部导航 -->
+        <div class="topNav">
+            <div class="logo fl">
+                <a href="../index.html">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </a>
+            </div>
+            <h4>省钱控-最新优惠</h4>
+            <div class="download fr">
+                <a href="#">
+                    <img src="../images/download.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- 中间内容 -->
+        <div class="main">
+            <!-- 区域滚动 -->
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul class="productList">
+                        <!-- 模板填充 -->
+                        <!-- 区域滚动 -->
+
+                </div>
+            </div>
+            </ul>
+        </div>
+        <div class="page">
+                <button class="previouspage disabled" type="button">上一页</button>
+                <select name="" id="selectop">
+                        <!-- <option value="">1/15</option> -->
+                </select>
+                <button class="nextpage" type="button">下一页</button>
+            </div>
+        <!-- 底部 -->
+        <div class="footer">
+          
+            <div class="function">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="../images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="foot">
+                <p>
+                    <a class="appDownload" href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 商品列表 -->
+    <script type="text/html" id="productList">
+        {{ each result v i }}
+        <li data-productid='{{v.productId}}'>
+            <!-- 此处应该拼接商品对应id -->
+<<<<<<< HEAD
+            <a href="productdetails.html?productId={{v.productId}}">
+=======
+            <a>
+>>>>>>> 83e6e6a9217caf665cf62347f0b7c54918576184
+                <div class="left">
+                    <a class="bigdiv">
+                        <!-- <img src="../images/0000000000-000000000123129054_1_200x200.jpg" alt=""> -->
+                        {{@v.productImgSm}}
+                    </a>
+                </div>
+                <div class="right">
+                    <p class="name">
+                        <a >{{v.productName}}
+                            <span>{{v.productPinkage}}元</span>
+                        </a>
+                    </p>
+                    <p class="link">
+                        <a class="smalla">
+                            <span>{{v.productFrom}} | {{v.productTime}}</span>
+                            <span class="mui-icon mui-icon-chat punlun">{{v.productComCount}}</span>
+
+                        </a>
+
+                    </p>
+                </div>
+            </a>
+
+        </li>
+        {{ /each }}
+
+    </script>
+
+</body>
+
+</html>
+<script type="text/html" id="ullist">
+<% for(var i = 1;i<= total;i++) { %>
+<option value="{{i}}" class="drop">{{i}}/{{total}}</option>
+<% } %>
+</script>
+<script>
+    $(".productList").on("click","li",function(){
+        window.location.href = "./productdetails.html?productId="+$(this).data("productid");
+    })
+    
+</script>

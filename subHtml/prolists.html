@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        document.querySelector('html').style.fontSize = screen.width / 10 + "px";
+    </script>
+    <title>MMP</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../css/prolists.css">
+    <script src="../js/common.js"></script>
+    <script src="../js/prolists.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <div class="container">
+        <div class="topNav">
+            <div class="logo fl">
+                <a href="../index.html">
+                    <img src="../images/topNav.png" alt="">
+                </a>
+            </div>
+            <div class="download fr">
+                <a href="#">
+                    <img src="../images/download.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!-- 中间内容 -->
+        <div class="main">
+            <div class="search">
+                <input type="text" placeholder="请输入比价商品">
+                <button>搜索</button>
+            </div>
+            <div class="selection">
+                <a class="active">综合</a>
+                <a>
+                    <span>销量</span>
+                    <span class="mui-icon mui-icon-arrowdown"></span>
+                </a>
+                <a>
+                    <span>价格</span>
+                    <span class="mui-icon mui-icon-arrowdown"></span>
+                </a>
+                <a class="sele">
+                    <span class="fa fa-bars"></span>
+                    <span>筛选</span>
+                </a>
+            </div>
+            <div class="content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul class="mui-table-view prolists">
+                            <!-- <li class="mui-table-view-cell">
+                                <div class="left">
+                                    <img src="../images/电视.jpg" alt="">
+                                </div>
+                                <div class="right">
+                                    <p class="title">海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视</p>
+                                    <p class="price">¥2149</p>
+                                    <p>
+                                        <span>5商城报价</span>
+                                        <span class="pull-right">有3972人评论</span>
+                                    </p>
+                                </div>
+                            </li> -->
+                        </ul>
+                        <div class="onload">
+                            <a>加载更多数据...</a>
+                        </div>
+                        <!-- 分页 -->
+                        <div class="pagenation">
+                           <button class="mui-btn pre">上一页</button>
+                           <select name="" id="">
+                               <option value="">1/5</option>
+                               <option value="">2/5</option>
+                           </select>
+                           <button class="mui-btn next">下一页</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 遮罩层 -->
+            <div class="mui-backdrop">
+                <div class="masker">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell title">
+                            <span class="text">筛选</span>
+                            <span class="mui-icon mui-icon-closeempty pull-right close"></span>
+                        </li>
+                        <li class="mui-table-view-cell mui-collapse mui-active">
+                            <a class="mui-navigate-right" href="#">
+                                <span class="title">品牌</span>
+                                <span class="red">全部品牌</span>
+                            </a>
+                            <div class="mui-collapse-content">
+                                <ul class="category">
+                                    <li>
+                                        <span class="active">全部品牌</span>
+                                    </li>
+                                    <li>
+                                        <span>海信</span>
+                                    </li>
+                                    <li>
+                                        <span>夏普</span>
+                                    </li>
+                                    <li>
+                                        <span>小米</span>
+                                    </li>
+                                    <li>
+                                        <span>创维</span>
+                                    </li>
+                                    <li>
+                                        <span>TCL</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mui-table-view-cell mui-collapse mui-active">
+                            <a class="mui-navigate-right" href="#">
+                                <span class="title">品牌</span>
+                                <span class="red">全部品牌</span>
+                            </a>
+                            <div class="mui-collapse-content">
+                                <ul class="category">
+                                    <li>
+                                        <span class="active">全部品牌</span>
+                                    </li>
+                                    <li>
+                                        <span>海信</span>
+                                    </li>
+                                    <li>
+                                        <span>夏普</span>
+                                    </li>
+                                    <li>
+                                        <span>小米</span>
+                                    </li>
+                                    <li>
+                                        <span>创维</span>
+                                    </li>
+                                    <li>
+                                        <span>TCL</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="mui-table-view-cell mui-collapse mui-active">
+                            <a class="mui-navigate-right" href="#">
+                                <span class="title">品牌</span>
+                                <span class="red">全部品牌</span>
+                            </a>
+                            <div class="mui-collapse-content">
+                                <ul class="category">
+                                    <li>
+                                        <span class="active">全部品牌</span>
+                                    </li>
+                                    <li>
+                                        <span>海信</span>
+                                    </li>
+                                    <li>
+                                        <span>夏普</span>
+                                    </li>
+                                    <li>
+                                        <span>小米</span>
+                                    </li>
+                                    <li>
+                                        <span>创维</span>
+                                    </li>
+                                    <li>
+                                        <span>TCL</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            <!-- <div class="more">
+                <a href="#">更多优惠信息 »</a>
+            </div> -->
+            <div class="sort">
+                <a href="#">
+                    <span class="fl">品牌排行</span>
+                    <img class="fr" src="../images/more.png" alt="">
+                </a>
+            </div>
+            <div class="function">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="../images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="foot">
+                <p>
+                    <a class="appDownload" href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/html" id="pro-lists">
+    {{each result v}}
+    <li class="mui-table-view-cell" data-id="{{v.productId}}" data-price="{{v.productPrice}}" data-comment="{{v.productCom}}">
+        <div class="left">
+            {{#v.productImg}}
+        </div>
+        <div class="right">
+            <p class="title">{{v.productName}}</p>
+            <p class="price">{{v.productPrice}}</p>
+            <p>
+                <span>{{v.productQuote}}</span>
+                <span class="pull-right">{{v.productCom}}</span>
+            </p>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<!-- 分页数据 -->
+<script type="text/html" id="options">
+    <% for(var i=1;i<=totalpage;i++){ %>
+    <option value="{{i}}">{{i}}/{{totalpage}}</option>
+   <% } %>
+</script>

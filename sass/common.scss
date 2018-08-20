@@ -1,0 +1,205 @@
+body,
+div,
+span,
+a,
+img,
+input,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+strong,
+em,
+i,
+del,
+header,
+main,
+footer,
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    border: 0 none;
+    vertical-align: middle;
+}
+
+input,button {
+    border: 0 none;
+    outline: 0 none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+    font-weight: normal;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+body,html {
+    font-size: 12px/100% ;
+    height: 100%;
+    background-color: #fff;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.topNav {
+    height: 51.0007px;
+    background-color: #ff841d;
+
+    .logo {
+        padding: 12.9996px;
+
+        a {
+            display: block;
+            width: 183.9982px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .download {
+        padding: 7.9985px;
+
+        a {
+            display: block;
+            width: 34.9996px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+.footer {
+    background-color: #f2f2f2;
+
+    .more {
+        padding: 9.9981px;
+
+        a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: #5a5a5a;
+            border: 1.0019px solid #ddd;
+            line-height: 29.9984px;
+            border-radius: 5.0011px;
+            background: linear-gradient(#ffffff, #f4f4f4);
+        }
+    }
+
+    .sort {
+        background: -webkit-gradient(linear,0 0,0 100%,from(#ffaf47),to(#ff9000));
+        margin: 9.9981px 0;
+        height: 36.0014px;
+        padding: 9.9981px;
+
+        a {
+            color: #fff;
+            font-weight: bold;
+            font-size: 18.0007px;
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            span {
+                margin-top: 1.9996px;
+            }
+
+            img {
+                width: 20.0003px;
+            }
+        }
+    }
+
+    .function {
+        height: 34.9996px;
+        display: flex;
+        border-top: 1.0019px solid #c4c4c4;
+        border-bottom: 1.0019px solid #c4c4c4;
+
+        a {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 14.9992px;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-right: 1.0019px solid #c4c4c4;
+            }
+        }
+    }
+
+    .foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 14.9992px;
+
+        p {
+            color: #666;
+
+            a {
+                color: #666;
+            }
+
+            .appDownload {
+                color: red;
+            }
+        }
+    }
+}
+body {
+    font-size: 12px;
+}

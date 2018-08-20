@@ -1,0 +1,367 @@
+body,
+div,
+span,
+a,
+img,
+input,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+strong,
+em,
+i,
+del,
+header,
+main,
+footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+
+input, button {
+  border: 0 none;
+  outline: 0 none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-weight: normal;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+body, html {
+  font-size: 12px/100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.topNav {
+  height: 51.0007px;
+  background-color: #ff841d;
+}
+.topNav .logo {
+  padding: 12.9996px;
+}
+.topNav .logo a {
+  display: block;
+  width: 183.9982px;
+}
+.topNav .logo a img {
+  width: 100%;
+}
+.topNav .download {
+  padding: 7.9985px;
+}
+.topNav .download a {
+  display: block;
+  width: 34.9996px;
+}
+.topNav .download a img {
+  width: 100%;
+}
+
+.footer {
+  background-color: #f2f2f2;
+}
+.footer .more {
+  padding: 9.9981px;
+}
+.footer .more a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #5a5a5a;
+  border: 1.0019px solid #ddd;
+  line-height: 29.9984px;
+  border-radius: 5.0011px;
+  background: linear-gradient(#ffffff, #f4f4f4);
+}
+.footer .sort {
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+  margin: 9.9981px 0;
+  height: 36.0014px;
+  padding: 9.9981px;
+}
+.footer .sort a {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18.0007px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.footer .sort a span {
+  margin-top: 1.9996px;
+}
+.footer .sort a img {
+  width: 20.0003px;
+}
+.footer .function {
+  height: 34.9996px;
+  display: flex;
+  border-top: 1.0019px solid #c4c4c4;
+  border-bottom: 1.0019px solid #c4c4c4;
+}
+.footer .function a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .function a img {
+  width: 14.9992px;
+}
+.footer .function a:nth-child(1), .footer .function a:nth-child(2) {
+  border-right: 1.0019px solid #c4c4c4;
+}
+.footer .foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14.9992px;
+}
+.footer .foot p {
+  color: #666;
+}
+.footer .foot p a {
+  color: #666;
+}
+.footer .foot p .appDownload {
+  color: red;
+}
+
+body {
+  font-size: 12px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header .shortBar {
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+  background-color: #ff841d;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  justify-content: space-between;
+}
+.container .header .shortBar .mui-icon-back {
+  color: #fff;
+}
+.container .header .shortBar .title {
+  font-size: 16px;
+  color: #fff;
+}
+.container .header .shortBar .download {
+  width: 30px;
+}
+.container .header .shortBar .download img {
+  width: 100%;
+}
+.container .header .navBar {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.container .header .navBar .mui-scroll {
+  display: flex;
+  align-items: center;
+}
+.container .header .navBar .mui-scroll a {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 15px;
+  position: relative;
+  color: #333;
+}
+.container .header .navBar .mui-scroll a.active::before {
+  content: '';
+  width: 24px;
+  height: 3px;
+  background-color: #f85000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+}
+.container .header .navBar .mui-scroll a.active {
+  color: #f85000;
+}
+.container .header .navBar li {
+  padding: 0 15px;
+  position: relative;
+  height: 100%;
+}
+.container .header .navBar li a {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.container .header .navBar li.active::before {
+  content: '';
+  width: 24px;
+  height: 3px;
+  background-color: #f85000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35px;
+}
+.container .main {
+  flex: 1;
+  background-color: #fff;
+  position: relative;
+}
+.container .main .mui-scroll {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .main .mui-scroll .product {
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .mui-scroll .product a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+.container .main .mui-scroll .product a .pic {
+  padding: 0 20px;
+}
+.container .main .mui-scroll .product a .pic img {
+  width: 100%;
+}
+.container .main .mui-scroll .product a .title {
+  margin-top: 10px;
+  line-height: 16px;
+  height: 32px;
+  color: #000;
+}
+.container .main .mui-scroll .product a .price {
+  color: #ff6c00;
+  height: 12px;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container .main .mui-scroll .product a div .productFrom {
+  padding-right: 5px;
+  border-right: 2px solid #ccc;
+}
+.container .main .mui-scroll .product a div .productTime {
+  padding-left: 5px;
+}
+.container .main .mui-scroll .product:nth-child(2n) {
+  border-left: 1px solid #ccc;
+}
+.container .footer {
+  flex-basis: 90px;
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+.container .footer .loginBar {
+  height: 30px;
+  border: 1px solid #cfcfcf;
+  display: flex;
+}
+.container .footer .loginBar a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .footer .loginBar a .goTop {
+  width: 15px;
+}
+.container .footer .loginBar .regist {
+  border-left: 1px solid #cfcfcf;
+  border-right: 1px solid #cfcfcf;
+}
+.container .footer .appDown {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .footer .appDown .message .mobile {
+  color: #ed1c24;
+}
+.container .footer .appDown .message .palmar {
+  color: #000;
+}
+.container .footer .appDown .message .platform {
+  color: #747474;
+}
+.container .footer .appDown .href {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=discounts.css.map */

@@ -1,0 +1,187 @@
+body, header, main, footer,
+div, p, ul, ol, li,
+span, img, input,
+h1, h2, h3, h4, h5, h6,
+a, b, i, strong {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666666;
+}
+
+input {
+  outline: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
+.all {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.all header {
+  flex: 0 0 82px;
+  display: flex;
+  flex-direction: column;
+}
+.all header .top {
+  height: 44px;
+  background-color: #f4483e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 9px;
+}
+.all header .top s
+.title {
+  color: #fff;
+}
+.all header .top a {
+  color: #fff;
+}
+.all header .bottom {
+  height: 38px;
+}
+.all main {
+  flex: 1 0 0;
+  height: 100%;
+  position: relative;
+}
+.all main .data {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+}
+.all main .data li {
+  height: 147px;
+  padding: 10px 5px;
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+.all main .data li .left {
+  flex: 0 0 130px;
+  margin-right: 5px;
+}
+.all main .data li .left img {
+  width: 100%;
+  height: 100%;
+}
+.all main .data li .right {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.all main .data li .right p {
+  margin-bottom: 10px;
+  color: #000000;
+}
+.all main .data li .right .jiaGe {
+  margin-bottom: 10px;
+  color: #f4483e;
+  font-size: 25px;
+}
+.all main .data li .right .jiaGe i {
+  font-style: normal;
+  margin-right: 5px;
+  font-size: 15px;
+}
+.all main .data li .right .jiaGe em {
+  font-style: normal;
+  font-size: 15px;
+}
+.all main .data li .right .jiaGe del {
+  margin-left: 5px;
+  color: #666666;
+  font-size: 15px;
+}
+.all main .data li .right .youHuiQuan {
+  margin-bottom: 10px;
+  color: #f4483e;
+}
+.all main .data li .right .youHuiQuan i {
+  font-style: normal;
+  display: inline-block;
+  width: 80px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #ffb7b7;
+  border: 1px solid #f4483e;
+  color: #fff;
+  text-align: center;
+  line-height: 15px;
+}
+.all main .data li .right .youHuiQuan b {
+  margin-left: 10px;
+}
+.all main .data li .right .get a {
+  color: #f4483e;
+  border: 1px dashed #f4483e;
+  padding: 3px 5px;
+}
+.all main .data li .right .get a:last-child {
+  background-color: #f4483e;
+  border-radius: 3px;
+  color: #fff;
+  margin-left: 30px;
+}
+.all footer {
+  flex: 0 0 91px;
+}
+.all footer .top {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #c4c4c4;
+}
+.all footer .top a {
+  flex: 1 0 0;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  background-color: #efefef;
+  color: #000000;
+}
+.all footer .bottom {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0 16px;
+}
+.all footer .bottom .link {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+.all footer .bottom .link .app {
+  color: #ff0000;
+  margin-right: 4px;
+}
+.all footer .bottom .link .phone {
+  color: #000000;
+  margin-right: 4px;
+}
+.all footer .bottom .link .pingTai {
+  color: #666666;
+}
+.all footer .bottom .com {
+  text-align: center;
+  color: #666666;
+}
+
+/*# sourceMappingURL=baiCaiJia.css.map */

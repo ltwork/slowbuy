@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 51px;
+  background-color: #f4483e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header .youhui {
+  color: #fff;
+}
+.container .header .mui-icon-back {
+  color: #fff;
+  font-size: 30px;
+}
+.container .header .download {
+  display: block;
+  width: 35px;
+  margin-right: 10px;
+}
+.container .header .download img {
+  width: 100%;
+}
+.container .main {
+  flex: 1;
+  position: relative;
+  background-color: #fff;
+}
+.container .main .mui-scroll .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .main .mui-scroll .products .pic {
+  width: 33.33333333333333333333333%;
+  padding: 10px 3px 3px 3px;
+}
+.container .main .mui-scroll .products .pic .price {
+  border: 1px solid #ccc;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+}
+.container .main .mui-scroll .products .pic .price a {
+  margin-top: 5px;
+  width: 60px;
+  height: 60px;
+}
+.container .main .mui-scroll .products .pic .price a img {
+  width: 100%;
+}
+.container .main .bar {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  height: 30px;
+  background-color: #f6f6f6;
+}
+.container .main .bar a {
+  padding: 0px 10px;
+  line-height: 30px;
+  color: #000;
+  font-size: 14px;
+}
+.container .footer {
+  flex-basis: 100px;
+  background-color: #f2f2f2;
+}
+.container .footer .function {
+  height: 35px;
+  display: flex;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.container .footer .function a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+.container .footer .function a img {
+  width: 15px;
+}
+.container .footer .function a:nth-child(1), .container .footer .function a:nth-child(2) {
+  border-right: 1px solid #c4c4c4;
+}
+.container .footer .foot {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.container .footer .foot p {
+  color: #666;
+}
+.container .footer .foot p a {
+  color: #666;
+}
+.container .footer .foot p .appDownload {
+  color: red;
+}
+
+/*# sourceMappingURL=coupons.css.map */

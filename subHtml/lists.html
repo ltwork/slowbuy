@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        document.querySelector('html').style.fontSize = screen.width / 10 + "px";
+    </script>
+    <title>MMP</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../css/lists.css">
+    <script src="../js/common.js"></script>
+    <script src="../js/lists.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部导航 -->
+        <div class="topNav">
+            <div class="logo fl">
+                <a href="../index.html">
+                    <img src="../images/topNav.png" alt="">
+                </a>
+            </div>
+            <div class="download fr">
+                <a href="#">
+                    <img src="../images/download.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!-- 中间内容 -->
+        <div class="main">
+            <div class="search">
+                <input type="text" placeholder="请输入比价商品">
+                <button>搜索</button>
+            </div>
+            <div class="content">
+                <div class="mui-content">
+                    <div class="mui-card">
+                        <ul class="mui-table-view">
+                            <!-- <li class="mui-table-view-cell mui-collapse">
+                                    <a class="mui-navigate-right" href="#">大家电</a>
+                                    <div class="mui-collapse-content">
+                                        <ul class="lists">
+                                            <li>电视机</li>
+                                        </ul>
+                                    </div>
+                                </li> -->
+                        </ul>
+                    </div>
+                </div>
+          
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="more">
+                <a href="#">更多优惠信息 »</a>
+            </div>
+            <div class="sort">
+                <a href="#">
+                    <span class="fl">品牌排行</span>
+                    <img class="fr" src="../images/more.png" alt="">
+                </a>
+            </div>
+            <div class="function">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="../images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="foot">
+                <p>
+                    <a class="appDownload" href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/html" id="prolists">
+    {{each result v}}
+    <li class="mui-table-view-cell mui-collapse ">
+        <a class="mui-navigate-right list" href="#" data-titleid="{{v.titleId}}">{{v.title}}</a>
+        <div class="mui-collapse-content">
+            <ul class="lists"></ul>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="category">
+    {{each result v}}
+    <li data-categoryid="{{v.categoryId}}" class="subcategory">{{v.category}}</li>
+    {{/each}}
+</script>

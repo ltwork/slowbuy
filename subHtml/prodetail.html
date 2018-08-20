@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        document.querySelector('html').style.fontSize = screen.width / 10 + "px";
+    </script>
+    <title>MMP</title>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../css/prodetail.css">
+    <script src="../js/common.js"></script>
+    <script src="../js/prodetail.js"></script>
+
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <div class="container">
+        <div class="topNav">
+            <div class="logo fl">
+                <a href="../index.html">
+                    <img src="../images/topNav.png" alt="">
+                </a>
+            </div>
+            <div class="download fr">
+                <a href="#">
+                    <img src="../images/download.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!-- 中间内容 -->
+        <div class="main">
+            <div class="search">
+                <input type="text" placeholder="请输入比价商品">
+                <button>搜索</button>
+            </div>
+            <div class="breadcrumb">
+                <a href="../index.html">首页
+                    <span>&gt;</span>
+                </a>
+                <a class="category">平板电视
+                    <span>&gt;</span>
+                </a>
+                <a class="brand">海信电视</a>
+            </div>
+            <div class="content">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="proinfo">
+                            <!-- <a class="collection">收藏</a>
+                            <img src="../images/电视.jpg" alt="">
+                            <p class="title">海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视</p>
+                            <p class="priceinfo">
+                                <span>
+                                    当前最低:
+                                    <span class="price">¥2149</span>
+                                </span>
+                                <span class="comment">
+                                    优选评论:3968条
+                                </span>
+                            </p> -->
+                        </div>
+                        <div class="otherinfo">
+                            <div class="option">
+                                <a class="active">比价购买</a>
+                                <a>产品参数</a>
+                                <a>优选评价</a>
+                            </div>
+                            <div class="detailcontent">
+                                <ul class="mui-table-view price-ratio">
+                                    <!-- <li class="mui-table-view-cell">
+                                        <a class="mui-navigate-right">
+                                            <div class="left">
+                                                <div class="logo">
+                                                    <img src="../images/guomei.png" alt="">
+                                                    <span class="title">国美</span>
+                                                </div>
+                                                <span class="self">自营</span>
+                                            </div>
+                                            <div class="right">
+                                                ¥2149.00
+                                            </div>
+                                        </a>
+                                    </li>                              
+                                    <li class="mui-table-view-cell">
+                                        <p>该商品历史最低价:¥2149.00</p>
+                                    </li> -->
+                                </ul>
+                                <div class="evaluate">
+                                    <div class="box">
+                                        <div class="up-part">
+                                            <p class="title">优选网友评价</p>
+                                        </div>
+                                        <div class="down-part">
+                                            <p>
+                                                <span class="username">魔**9</span>
+                                                <span class="time">2017/9/1</span>
+                                            </p>
+                                            <p>
+                                                <span class="stars">
+                                                    <i>★★★★★</i>
+                                                </span>
+                                                <span>购买自:京东商城</span>
+                                            </p>
+                                            <p class="text">
+                                                电视挺好的，要是没发现问题，哈，可以买，720p的也挺清楚了，坐等视频会员，话费
+                                            </p>
+                                            <p class="reply">回复</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="more">
+                <a href="#">更多优惠信息 »</a>
+            </div>
+            <div class="sort">
+                <a href="#">
+                    <span class="fl">品牌排行</span>
+                    <img class="fr" src="../images/more.png" alt="">
+                </a>
+            </div>
+            <div class="function">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="../images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="foot">
+                <p>
+                    <a class="appDownload" href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/html" id="info">
+    <a class="collection">收藏</a>
+    {{#result[0].productImg}}
+    <p class="title">{{result[0].productName}}</p>
+    <p class="priceinfo">
+        <span>
+            当前最低:
+            <span class="price">{{result[0].price}}</span>
+        </span>
+        <span class="comment">
+            {{result[0].comment}}
+        </span>
+    </p>
+
+</script>
+
+<script type="text/html" id="commentTotal">
+    
+    <div class="up-part">
+        <p class="title">优选网友评价</p>
+    </div>
+    {{each result v}}
+    <div class="down-part">
+        <p>
+            <span class="username">{{v.comName}}</span>
+            <span class="time">{{v.comTime}}</span>
+        </p>
+        <p>
+            <span class="stars">
+                <i>★★★★★</i>
+            </span>
+            <span>{{v.comFrom}}</span>
+        </p>
+        <p class="text">
+            {{v.comContent}}
+        </p>
+        <p class="reply">回复</p>
+    </div>
+    {{/each}}
+</script>

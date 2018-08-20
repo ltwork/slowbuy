@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品</title>
+    <link rel="icon" href="../images/xiongmao.ico">
+    <!-- JQ -->
+    <script src="../lib/jQuery/jquery-3.1.1.min.js"></script>
+    <!-- 模板 -->
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <!-- mui -->
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+
+
+    <!-- 本页面 -->
+    <script src="../js/coudanpin.js"></script>
+    <link rel="stylesheet" href="../css/coudanpin.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <!-- 顶部导航 -->
+    <div class="topNav">
+        <a href="../index.html">
+            <</a>
+                <span>凑单品</span>
+    </div>
+
+
+    <!-- 导航 -->
+    <div class="nav">
+        <div class="left">
+            <a data-xh="1">
+                <span class="jd" id="shop" data-shopid="0">京东</span>
+                <span class="mui-icon mui-icon-arrowdown"></span>
+            </a>
+            <a data-xh="2">
+                <span class="jd" id="area" data-areaid="0">华北</span>
+                <span class="mui-icon mui-icon-arrowdown"></span>
+            </a>
+            <a data-xh="3">
+                <span class="jd" id="jiage">1元</span>
+                <span class="mui-icon mui-icon-arrowdown"></span>
+            </a>
+        </div>
+        <div class="rig">   
+            <span class="mui-icon mui-icon-search"></span>
+            <span class="mui-icon mui-icon-closeempty" id="xx" style="display: none"></span>
+        </div>
+        <div class="yc1">
+
+        </div>
+        <div class="yc2">
+
+        </div>
+        <div class="yc3">
+            <ul>
+                <li>全部价格<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+                <li>1-3元<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+                <li>3-5元<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+                <li>5-10元<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+                <li>10-15元<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+                <li>15以上<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+                <li>价格没数据全部写死<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+            </ul>
+        </div>
+        <div class="yc4">
+            <div class="ss"><input type="text" placeholder="点什么点，没接口"><a>搜索</a></div>
+            <p style="color: #000;">排序</p>
+            <div class="paixu">
+                
+                <button type="button" class="mui-btn yanse">销量</button>
+                <button type="button" class="mui-btn">价格↑</button>
+                <button type="button" class="mui-btn">价格↓</button>
+            </div>
+            <div style="width: 100%;
+            height: 1px; background-color: #ccc; margin-top: 6px;"></div>
+            <p style="margin-top: 12px; color: #000">分类</p>
+            <div class="classify">
+                <button type="button" class="mui-btn yanse">全部</button>
+                <button type="button" class="mui-btn">家具</button>
+                <button type="button" class="mui-btn">数码</button>
+                <button type="button" class="mui-btn">办公</button>
+                <button type="button" class="mui-btn">个护</button>
+                <button type="button" class="mui-btn">食品</button>
+                <button type="button" class="mui-btn">母婴</button>
+                <button type="button" class="mui-btn">服饰</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+
+    </div>
+
+
+</body>
+
+</html>
+<script type="text/html" id="muban1">
+    <ul>
+        {{each result v i}}
+        <li data-shopid="{{v.shopId}}">{{v.shopName}}<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+        
+        {{/each}}
+    </ul>
+</script>
+
+<script type="text/html" id="muban2">
+    <ul>
+        {{each result v i}}
+        <li data-areaid="{{v.areaId}}">{{v.areaName}}<span class="mui-icon mui-icon-checkmarkempty"></span></li>
+        {{/each}}
+    </ul>
+</script>
+
+<script type="text/html" id="muban3">
+    {{each result v i}}
+    <div>
+        <a href="#">
+            <img src="{{v.productImg}}" alt="">
+            <p class="describe mui-ellipsis-2">{{v.productName}}</p>
+            <p class="price">
+                <span class="price1">￥</span>
+                <span class="price2">{{v.productPrice.substr(1)}}</span>
+            </p>
+        </a>
+    </div>
+    {{/each}}
+</script>
+
+

@@ -1,0 +1,123 @@
+@import "./coupons.scss";
+
+.container{
+    //主体部分
+    .main{
+        flex: 1;
+        position: relative;
+        .mui-scroll{
+            .title{
+                text-align: center;
+                padding: 10px 0px;
+            }
+            .productlist{
+                
+                li{
+                    position: relative;
+                    padding: 8px 0px;
+                    display:flex;
+                    height: 170px;
+                    border-bottom: 1px solid #ccc;
+                    .left{
+                         flex: 1;
+                         padding: 0px 10px;
+    
+                         a{
+                             width: 100%;
+                             img{
+                                 width: 100%;
+                             }
+                         }
+                     }
+                     .right{
+                         flex:2;
+                       
+                         .proname{
+                             color: #000;
+                         }
+                        .time{
+                            position: absolute;
+                            bottom: 10px;
+                            color: #ef8011;
+    
+                        }
+                        .money{
+                            color: #f10215;
+                            font-size: 16px;
+                        }
+                     }
+                }
+                
+            }
+        }
+    }
+    
+
+}
+// 遮罩层
+.mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+     height: 100%;
+     width: 100%;
+     background:rgba(51,51,51,1);
+     opacity: 0.9;
+     z-index: 100;
+     display:none;
+   
+}
+//遮罩层里面的小盒子
+.masked{
+    width: 280px;
+    height: 160px;
+    position: absolute;
+  
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left:-140px;
+    z-index: 110;
+    display:none;
+    .left{
+        border-radius: 5px;
+        position: absolute;
+        width: 40px;
+        height: 50px;
+        background-color:#242424;
+        top: 50%;
+        margin-top: -25px;
+        span{
+            color: #979797;
+            font-size: 50px;
+            
+        }
+
+    }
+    .imgs{
+       position: absolute;
+        left: 40px;
+        top: 0px;
+        width: 200px;
+        height: 160px;
+        img{
+            width: 100%;
+        }
+    }
+    .right{
+        border-radius: 5px;
+        position: absolute;
+        right: 0;
+        width: 40px;
+        height: 50px;
+        background-color:#242424;
+        top: 50%;
+        margin-top: -25px;
+        span{
+            color: #979797;
+            font-size: 50px;
+            
+        }
+
+    }
+}

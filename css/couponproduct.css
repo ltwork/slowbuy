@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 51px;
+  background-color: #f4483e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header .youhui {
+  color: #fff;
+}
+.container .header .mui-icon-back {
+  color: #fff;
+  font-size: 30px;
+}
+.container .header .download {
+  display: block;
+  width: 35px;
+  margin-right: 10px;
+}
+.container .header .download img {
+  width: 100%;
+}
+.container .main {
+  flex: 1;
+  position: relative;
+  background-color: #fff;
+}
+.container .main .mui-scroll .products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .main .mui-scroll .products .pic {
+  width: 33.33333333333333333333333%;
+  padding: 10px 3px 3px 3px;
+}
+.container .main .mui-scroll .products .pic .price {
+  border: 1px solid #ccc;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+}
+.container .main .mui-scroll .products .pic .price a {
+  margin-top: 5px;
+  width: 60px;
+  height: 60px;
+}
+.container .main .mui-scroll .products .pic .price a img {
+  width: 100%;
+}
+.container .main .bar {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  height: 30px;
+  background-color: #f6f6f6;
+}
+.container .main .bar a {
+  padding: 0px 10px;
+  line-height: 30px;
+  color: #000;
+  font-size: 14px;
+}
+.container .footer {
+  flex-basis: 100px;
+  background-color: #f2f2f2;
+}
+.container .footer .function {
+  height: 35px;
+  display: flex;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.container .footer .function a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+.container .footer .function a img {
+  width: 15px;
+}
+.container .footer .function a:nth-child(1), .container .footer .function a:nth-child(2) {
+  border-right: 1px solid #c4c4c4;
+}
+.container .footer .foot {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+.container .footer .foot p {
+  color: #666;
+}
+.container .footer .foot p a {
+  color: #666;
+}
+.container .footer .foot p .appDownload {
+  color: red;
+}
+
+.container .main {
+  flex: 1;
+  position: relative;
+}
+.container .main .mui-scroll .title {
+  text-align: center;
+  padding: 10px 0px;
+}
+.container .main .mui-scroll .productlist li {
+  position: relative;
+  padding: 8px 0px;
+  display: flex;
+  height: 170px;
+  border-bottom: 1px solid #ccc;
+}
+.container .main .mui-scroll .productlist li .left {
+  flex: 1;
+  padding: 0px 10px;
+}
+.container .main .mui-scroll .productlist li .left a {
+  width: 100%;
+}
+.container .main .mui-scroll .productlist li .left a img {
+  width: 100%;
+}
+.container .main .mui-scroll .productlist li .right {
+  flex: 2;
+}
+.container .main .mui-scroll .productlist li .right .proname {
+  color: #000;
+}
+.container .main .mui-scroll .productlist li .right .time {
+  position: absolute;
+  bottom: 10px;
+  color: #ef8011;
+}
+.container .main .mui-scroll .productlist li .right .money {
+  color: #f10215;
+  font-size: 16px;
+}
+
+.mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #333333;
+  opacity: 0.9;
+  z-index: 100;
+  display: none;
+}
+
+.masked {
+  width: 280px;
+  height: 160px;
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -140px;
+  z-index: 110;
+  display: none;
+}
+.masked .left {
+  border-radius: 5px;
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  background-color: #242424;
+  top: 50%;
+  margin-top: -25px;
+}
+.masked .left span {
+  color: #979797;
+  font-size: 50px;
+}
+.masked .imgs {
+  position: absolute;
+  left: 40px;
+  top: 0px;
+  width: 200px;
+  height: 160px;
+}
+.masked .imgs img {
+  width: 100%;
+}
+.masked .right {
+  border-radius: 5px;
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 50px;
+  background-color: #242424;
+  top: 50%;
+  margin-top: -25px;
+}
+.masked .right span {
+  color: #979797;
+  font-size: 50px;
+}
+
+/*# sourceMappingURL=couponproduct.css.map */

@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+html, body {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .header {
+  height: 50px;
+  background-color: #ff841d;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header .back {
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+}
+.container .header .back a {
+  font-size: 30px;
+  color: white;
+}
+.container .header .logo {
+  color: white;
+  font-size: 18px;
+}
+.container .header .app img {
+  height: 40px;
+  width: 40px;
+}
+.container .main {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+.container .main .box {
+  width: 100%;
+  height: 1000px;
+  padding: 5px 83px;
+}
+.container .main .box .shoping {
+  box-sizing: content-box;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  height: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+.container .main .box .shoping.active {
+  background-color: #ddd;
+}
+.container .main .box .shoping img {
+  flex: 0 0 10px;
+}
+
+/*# sourceMappingURL=nav.css.map */

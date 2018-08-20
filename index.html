@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/jQuery/jquery-3.1.1.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <script src="lib/artTemplate/template-web.js"></script>
+
+
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/images/header_logo.png" alt="">
+            </div>
+            <div class="headerApp">
+                <img src="images/header_app.png" alt="">
+            </div>
+        </header>
+        <main>
+
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!-- 搜索部分 -->
+                    <div class="search">
+                        <input type="text" placeholder="输入你想要比价的商品">
+                        <button type="button" class="mui-btn mui-btn-warning">搜索</button>
+                    </div>
+                    <!-- 导航部分 -->
+                    <div class="nav">
+                        <!-- 导航模板生成部分 -->
+                    </div>
+                    <!-- 平拍排行部分 -->
+                    <div class="discount">
+                        <div class="recommend">
+                            <span>
+                                超值折扣推荐
+                            </span>
+                            <a>
+                                <img src="images/more.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="products">
+                        <!-- <div class="product">
+                            <div class="left">
+                                <img src="images/sqkb_sources_static_img_news_2016_01bbdeaab8c24230957c3ce7015f51f57ada7c33.jpg" alt="">
+                            </div>
+                            <div class="right">
+                                <p class="text">移动端凑单品：海天 鲜味 生抽 1.28L</p>
+                                <p class="price">
+                                   <div class="left">
+                                    <span>10.9元</span>
+                                    <span>10-25 14:10</span>
+                                   </div>
+                                   <div class="right">{{京东商城}}</div>
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+
+        <footer>
+            <div class="more">
+                <a href="#">更多优惠信息 >></a>
+            </div>
+            <div class="bottom">
+                <div class="brand">
+                    <span>
+                        品牌排行
+                    </span>
+                    <a>
+                        <img src="images/more.png" alt="">
+                    </a>
+                </div>
+                <div class="enroll">
+                    <a href="#">登陆</a>
+                    <a href="#">注册</a>
+                    <a class="getBack">
+                        <img src="images/images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+                <p class="phone">
+                    <span>手机APP下载</span>
+                    <span>慢慢买手机版</span>
+                    <span>--掌上比价平台</span>
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/html" id="tpl">
+
+    <!-- <div class="top">
+        {{ each list v i }} {{ if i
+        <=7 }} <a href="#" {{if i==7}}class="gengduo" {{/if}} data-id="{{v._id}}">
+            {{@v.img}}
+            <span>{{ v.name }}</span>
+            </a>
+            {{/if}} {{ /each }}
+    </div>
+    <div class="bottom" style="display:none">
+        {{ each list v i}} {{ if i>7 }}
+        <a href="#" data-id="{{v._id}}">
+            {{@v.img}}
+            <span>{{ v.name }}</span>
+        </a>
+        {{/if}} {{ /each }}
+    </div> -->
+
+
+    <div class="top">
+        {{ each list v i }} 
+        {{ if i<=7 }} 
+        <a class=click{{i}}>
+            {{@v.img}}
+            <span>{{ v.name }}</span>
+            </a>
+            {{/if}}
+         {{ /each }}
+
+    </div>
+
+    <div class="bottom" style="display:none">
+        {{ each list v i}} {{ if i>7 }}
+        <a class="click{{i}}">
+            {{@v.img}}
+            <span>{{ v.name }}</span>
+        </a>
+        {{/if}} {{ /each }}
+    </div>
+
+</script>
+
+<script type="text/html" id="tpl1">
+    {{each list v i}}
+    <div class="product" data-id="{{v.productId}}">
+        <div class="left">
+            {{@v.productImgSm}}
+        </div>
+        <div class="right">
+            <div class="text">{{v.productName}}
+                <span class="orange">{{v.productPinkage}}</span>
+            </div>
+            <div class="price">
+                <div class="shangcheng">
+                    <span>{{v.productFrom}} |</span>
+                    <span> {{v.productTime}}</span>
+                </div>
+                <div class="pinglun">{{v.productComCount}}</div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+
+</script>

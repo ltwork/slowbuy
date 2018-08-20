@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>distop</title>
+    <script>
+        document.querySelector('html').style.fontSize = screen.width / 10 + "px";
+
+        if (screen.width >= 414) {
+            document.querySelector('html').style.fontSize = 41.4 + "px";
+        }
+    </script>
+
+    <script src="../lib/jQuery/jquery-3.1.1.min.js"></script>
+
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <script src="../lib/mui/js/mui.min.js"></script>
+
+    <link rel="stylesheet" href="../css/distop.css">
+    <script src="../js/distop.js"></script>
+</head>
+
+<body>
+    <div class="contain">
+        <!-- 顶部导航 -->
+        <div class="topNav">
+            <div class="logo fl">
+                <a href="../index.html">
+                    <img src="../images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="download fr">
+                <a href="#">
+                    <img src="../images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="searchBar">
+            <input type="text" placeholder="请输入你想比价的商品">
+            <button type="button" class="mui-btn mui-btn-warning">搜索</button>
+        </div>
+
+        <!-- 中间内容 -->
+        <div class="main">
+            <!-- 导航 -->
+            <div class="nav">
+                <a href="../index.html">首页</a>
+                <span>></span>
+                <a href="./brand.html">品牌大全</a>
+                <span>></span>
+                <a class="title toptit"></a>
+            </div>
+
+            <div class="brandContent">
+                <!-- 品牌内容 -->
+                <div class="contentTop">
+                    <div class="brandTitle">
+                        <p class="titleDesc toptit"></p>
+                    </div>
+
+                    <div class="content">
+                        <ul class="mui-table-view brandCon">
+                            <!-- <li class="mui-table-view-cell">
+                            <a class="mui-navigate-right">
+                                <div class="left">1</div>
+                                <div class="right">
+                                    <p class="Digtitle">海信平板电视</p>
+                                    <p class="sale">30天全网销量：1226482件</p>
+                                </div>
+                            </a>
+                        </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 销量排行 -->
+                <div class="hdsort">
+                    <div class="brandTitle">
+                        <p class="titleDesc hdtit"></p>
+                    </div>
+
+                    <!-- mui-ellipsis-2 -->
+                    <div class="hdContent">
+                        <ul class="mui-table-view hdCon">
+                            <!-- <li class="mui-table-view-cell">
+                            <div class="hdleft">
+                                <img src="../images/Thumb_2017090008503540540.jpg" alt="">
+                            </div>
+                            <div class="hdright">
+                                <div class="hdtitle mui-ellipsis-2">海信(Hisense) LED55EC500U 55英寸 4K超高清 智能液晶电视</div>
+                                <div class="prices">
+                                    <span class="price fl">￥2099.00</span>
+                                    <span class="stars fr">
+                                        ★★★★★
+                                    </span>
+                                </div>
+                                <div class="other">
+                                    <span class="offer">报价(5)</span>&nbsp;&nbsp;
+                                    <span class="comment">全网评论(337578)</span>
+                                </div>
+                            </div>
+                        </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 评论 -->
+                <div class="com">
+                    <div class="brandTitle">
+                        <p class="titleDesc comtit"></p>
+                    </div>
+
+                    <div class="comContent">
+                        <ul class="mui-table-view comCon">
+                            <!-- <li class="mui-table-view-cell">
+                            <div class="top">
+                                <div class="pic">
+                                    <img src="../images/Thumb_com.jpg" alt="">
+                                </div>
+                                <div class="tit mui-ellipsis-2">LG 49LF5400 49英寸 全高清 普通LED液晶电视</div>
+                            </div>
+
+                            <div class="bottom">
+                                <div class="box"></div>
+                                <div class="name">
+                                    <div class="userbox">
+                                        <span class="username">8***m：</span>
+                                        <span class="star">★★★★★</span>
+                                    </div>
+                                    <div class="datetime">2014/12/20</div>
+                                </div>
+                                <div class="con">
+                                    这款液晶电视对比其它品牌电视最喜欢的是采用IPS硬屏液晶面板，屏幕比较坚固，质量应该比其它液晶面板会好，极其突出了这款电视的性价比；色彩使用了1920*1080P的分辨率，三重XD引擎，提高了色质的水准、对比度和清晰度，呈现的画质和性能画面色彩也比较清晰，显示效果也比较细腻自然；外观方面采用生动锐利铜钱纹样设计，简约的白色电视底座搭配银色的窄边框感觉比较简单时尚，也是比较喜欢的；功能使用简单，菜单键进入图像，生意，设置，时间，选项，输入，我的媒体8个功能主题，2组HDMI接口满足了我的DVD设备和网络电视机顶和的使用，1组数字音响输出满足我外接5.1音响系统的需要，画面比例点对点扫描，让我接电脑主机的画面设置更简单；炫亮人声Ⅰ，畅听清晰对话的设计。自动识别和加强电影和电视节目中的人声的功能，使我听到的背景声音更清晰突显，标注.音乐.电影.运动.游戏五个声音模式选择满足了日常视听的需求。LG的国际品牌也是比较让大家信赖的。
+                                </div>
+                            </div>
+                        </li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- title -->
+                <p class="goodTop">平板电视好物榜单</p>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="function">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">
+                    <img src="../images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="foot">
+                <p>
+                    <a class="appDownload" href="#">手机APP下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p>
+                    m.manmanbuy.com
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- 品牌内容模版 -->
+<script type="text/html" id="tplbrandCon">
+    {{each result v k}}
+    <li class="mui-table-view-cell tplcon" data-brandid="{{v.brandId}}">
+        <a class="mui-navigate-right">
+            <div class="left">{{k+1}}</div>
+            <div class="right">
+                <p class="Digtitle">{{v.brandName}}</p>
+                <p class="sale">{{v.brandInfo}}</p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!-- 销量模版 -->
+<script type="text/html" id="tplhdCon">
+    {{each result v k}}
+    <li class="mui-table-view-cell hdtpl" data-productid="{{v.productId}}">
+            <div class="hdleft">
+                {{@v.productImg}}
+            </div>
+            <div class="hdright">
+                <div class="hdtitle mui-ellipsis-3">{{v.productName}}</div>
+                <div class="prices">
+                    <span class="price fl">{{v.productPrice}}</span>
+                    <span class="stars fr">
+                        ★★★★★
+                    </span>
+                </div>
+                <div class="other">
+                    <span class="offer">{{v.productQuote}}</span>&nbsp;&nbsp;
+                    <span class="comment">全网{{v.productCom}}</span>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</script>
+
+<!-- 评论模版 -->
+<script type="text/html" id="tplcom">
+    {{each result v k}}
+    <li class="mui-table-view-cell comtpl" data-productid="{{v.productId}}">
+        <div class="top">
+            <div class="pic">
+                <img src="../images/Thumb_com.jpg" alt="">
+            </div>
+            <div class="tit mui-ellipsis-2">{{v.tit}}</div>
+        </div>
+
+        <div class="bottom">
+            <div class="box"></div>
+            <div class="name">
+                <div class="userbox">
+                    <span class="username">{{v.comName}}：</span>
+                    <span class="star">★★★★★</span>
+                </div>
+                <div class="datetime">{{v.comTime}}</div>
+            </div>
+            <div class="con">
+                {{v.comContent}}
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>

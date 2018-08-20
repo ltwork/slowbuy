@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        height: 51px;
+        background-color: #ff841d;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon {
+            flex-basis: 50px;
+            color: white;
+            text-align: center;
+        }
+        .new {
+            flex: 1;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+        }
+        .app {
+            flex-basis: 50px;
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+    .main {
+        flex: 1;
+        position: relative;
+        background-color: #fff;
+
+        .scrolllist {
+            .products {
+                padding-bottom: 10px;
+                display: flex;
+                .left {
+                    flex: 1;
+                    img {
+                        width: 100%;
+                        height: 110px;
+                    }
+                }
+                .right {
+                    flex: 2;
+    
+                    padding-left: 15px;
+    
+                    .list {
+                        margin: 0;
+                        font-size: 14px;
+                        color: black;
+                    }
+                    .litre {
+                        font-size: 14px;
+                        color: black;
+    
+                        span {
+                            font-size: 14px;
+                            color: #ff841d;
+                        }
+                    }
+                    .shop {
+
+                        position: relative;
+                        span {
+                            font-size: 12px; 
+                        }
+                        .commmont {
+                            font-size: 14px; 
+                            position: absolute;
+                            right: 0;
+                            top: 3px;
+                        }
+                    }
+                }
+            }
+        }
+       
+        
+    }
+    .footer {
+        flex-basis: 100px;
+        background-color: #f2f2f2;
+        .page {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .previous {
+                width: 100px;
+                height: 35px;
+                background-color: #ddd;  
+            }
+            .pagesize {
+                border: 1px solid #ccc;
+                background-color: #fff;
+               .choose {
+                   width: 90px;
+                   height: 35px;
+                   margin: 0;
+                   
+               }
+               span {
+                  
+                   font-size: 12px;
+                    padding-right: 5px;
+               }
+            }
+            .next {
+                width: 100px;
+                height: 35px;
+                background-color: #ddd;
+            }
+        }
+        .function {
+            height: 35px;
+            display: flex;
+            border-top: 1px solid #c4c4c4;
+            border-bottom: 1px solid #c4c4c4;
+            a {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #000;
+                font-size: 16px;
+                img {
+                    width: 15px;
+                }
+                &:nth-child(1),
+                &:nth-child(2) {
+                    border-right: 1px solid #c4c4c4;
+                }
+            }
+        }
+        .foot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            p {
+                color: #666;
+                a {
+                    color: #666;
+                }
+                .appDownload {
+                    color: red;
+                }
+            }
+        }
+    }
+}

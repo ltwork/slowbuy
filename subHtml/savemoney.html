@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="../lib/zepto/zepto.min.js"></script>
+
+
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <script src="../lib/mui/js/mui.min.js"></script>
+
+    <script src="../lib/artTemplate/template-web.js"></script>
+
+
+    <link rel="stylesheet" href="../lib/fa/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/savemoney.css">
+    <script src="../js/savemoney.js"></script>
+
+    <body>
+        <div class="container">
+            <!-- 顶部导航 -->
+            <div class="header">
+                <a class="icon">
+                    <span class="mui-icon mui-icon-arrowleft callback"></span>
+                </a>
+                <span class="new">
+                    省 钱 控 - 最 新 优 惠
+                </span>
+                <a href="http://android.myapp.com/myapp/detail.htm?apkName=com.manmanbuy.bijia&ADTAG=mobile" class="app">
+                    <img src="../images/header_app.png" alt="">
+                </a>
+
+            </div>
+            <div class="main">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll scrolllist">
+                      
+                        <!-- 商品详情页模板 -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="page">
+                    <button class="previous">上一页</button>
+                    <div class="pagesize">
+                        <select class="choose">
+                            <!-- 页码模块 -->
+                           <option value="1">1</option> 
+                           <option value="2">2</option> 
+                           <option value="3">3</option> 
+                           <option value="4">4</option> 
+                           <option value="5">5</option> 
+                           <option value="6">6</option> 
+                           <option value="7">7</option> 
+                           <option value="8">8</option> 
+                           <option value="9">9</option> 
+                           <option value="10">10</option> 
+                           <option value="11">11</option> 
+                           <option value="12">12</option> 
+                           <option value="13">13</option> 
+                           <option value="14">14</option> 
+                           <option value="15">15</option> 
+                           
+                         
+                           
+                        </select>
+                        <!-- <span class="pagelist">▼</span> -->
+                       
+                    </div>
+                    <button class="next">下一页</button>
+                </div>
+                <div class="function">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#" class="backTop">
+                        <img src="../images/top.jpg" alt="">
+                        <span>返回顶部</span>
+                    </a>
+                </div>
+                <div class="foot">
+                    <p>
+                        <a class="appDownload" href="#">手机APP下载</a>
+                        <a href="#">慢慢买手机版</a>
+                        -- 掌上比价平台
+                    </p>
+                    <p>
+                        m.manmanbuy.com
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 商品详情页模板 -->
+        <script type="text/html" id="shoplist">
+            {{each result v i}}
+            <div class="products" data-id="{{v.productId}}">
+                <div class="left">
+                  {{@v.productImgSm}}
+                </div>
+                <div class="right">
+                    <p class="list">{{v.productName}}</p>
+                    <p class="litre">
+                        <span>{{v.productPinkage}}</span>
+                    </p>
+                    <p class="shop">
+                        <span>{{v.productFrom}}</span>
+                        <span>|</span>
+                        <span>{{v.productTime}}</span>
+                        <span class="mui-icon mui-icon-chatboxes commmont"> {{v.productComCount}} </span>
+                    </p>
+
+                </div>
+            </div>
+
+            {{/each}}
+           
+
+        </script>
+
+       
+
+
+    </body>
+
+</html>
+

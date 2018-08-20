@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠卷列表</title>
+
+    <script src="../lib/jQuery/jquery-3.1.1.min.js"></script>
+
+
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <script src="../lib/mui/js/mui.min.js"></script>
+
+    <script src="../lib/artTemplate/template-web.js"></script>
+
+
+    <!-- <link rel="stylesheet" href="../lib/fa/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="../css/couponproduct.css">
+
+    <script src="../js/couponproduct.js"></script>
+ 
+<body>
+    <div class="container">
+    <!-- 顶部导航 -->
+        <div class="header">
+            <a class="back" ><span class="mui-icon mui-icon-back"></span></a>   
+            <a href="" class="youhui">肯德基优惠卷</a>
+            <a href="" class="download"><img src="../images/download.png" alt=""></a>
+
+        </div>
+        <div class="main">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <p class="title">-点餐前出示手机中的优惠卷,即可享受优惠-</p>
+                    <ul class="productlist">
+                       
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+                <div class="function">
+                    <a href="#">登录</a>
+                    <a href="#">注册</a>
+                    <a href="#">
+                        <img src="../images/top.jpg" alt="">
+                        <span class="top">返回顶部</span>
+                    </a>
+                </div>
+                <div class="foot">
+                    <p>
+                        <a class="appDownload" href="#">手机APP下载</a>
+                        <a href="#">慢慢买手机版</a>
+                        -- 掌上比价平台
+                    </p>
+                    <p>
+                        m.manmanbuy.com
+                    </p>
+                </div>
+        </div>
+        
+    </div>
+    <div class="mask">    
+    </div>  
+    <div class="masked">
+            <div class="left">
+                <span class="mui-icon mui-icon-arrowleft"></span>
+            </div>
+           <div class="imgs">
+                <img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt="">
+           </div>
+            <div class="right">
+                <span class="mui-icon mui-icon-arrowright"></span>
+            </div>
+     </div> 
+   
+</body>
+</html>
+
+<script id="counponlist" type="text/html">
+    {{each result v i}}
+    <li >
+            <div class="left">
+                <a class="popup"data-img="{{v.couponProductImg}}" data-id="{{i}}">{{#v.couponProductImg}}</a>
+            </div>
+            <div class="right">
+                <p class="proname">{{v.couponProductName}}</p>
+                <p class="money"><span>{{v.couponProductPrice}}</span> <span class="mui-icon mui-icon-arrowright mui-pull-right"></span></p>
+                <p class="time">{{v.couponProductTime}}</p>
+            </div>
+    </li>
+    {{/each}}
+</script>

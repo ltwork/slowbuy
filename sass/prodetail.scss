@@ -1,0 +1,229 @@
+@import "common.scss";
+$bgColor:#ff841d;
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background: #f2f2f2;
+        .search {
+            height: 52px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            border-bottom: 1px solid #ddd;
+            input {
+                flex: 1;
+                height: 30px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background: #f1f1f1;
+                margin-left: 5px;
+                padding-left: 10px;
+                margin-bottom: 0;
+                font-size: 14px;
+            }&:nth-child(1){
+                border-left: none;
+                border-right: none;
+            }
+            button {
+                flex-basis: 64px;
+                height: 30px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background: $bgColor;
+                color: #fff;
+                margin-left: -5px;
+            }
+        }
+        .breadcrumb {
+            height: 35px;
+            border-bottom: 1px solid #ddd;
+            background: linear-gradient(to bottom,#fdfdfd,#eeeeee);
+            // display: flex;
+            a {
+                font-size: 14px;
+                line-height: 35px;
+                color: #7a7a7a;
+                span{
+                    color: #000;
+                    font-size: 16px;
+                    margin: 0 2px;
+                }
+            }
+            .brand{
+                overflow: hidden;   
+            }
+        }
+        .content {
+            flex: 1;
+            position: relative;
+            .mui-scroll{
+                display: flex;
+                flex-direction: column;
+                .proinfo{
+                    display: flex;
+                    flex-direction: column;
+                    background: #fff;
+                    justify-content: space-around;
+                    padding: 15px 0;
+                    position: relative;
+                    .collection{
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background: #95d800;
+                        color: #fff;
+                        right: 15px;
+                        top: 15px;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: 13px;
+                    }
+                    img{
+                        align-self: center;
+                    }
+                    .title{
+                        color: #000;
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                    .priceinfo{
+                        margin-top: 5px;
+                        span{
+                            line-height: 20px;
+                        }
+                        .comment{
+                            margin-left: 65px;
+                        }
+                    }
+                }
+                .otherinfo{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    .option{
+                        height: 35px;
+                        display: flex;
+                        margin-top: 20px;
+                        a{
+                            flex: 1;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: #fff;
+                            font-size: 16px;
+                            background: #ffc526;
+                            border:1px solid #c14d00;
+                            position: relative;
+                            &:nth-child(1){
+                                border-left: none;
+                                border-right: none;
+                            }
+                            &:nth-child(3){
+                                border-left: none;
+                                border-right: none;
+                            }
+                            &.active{
+                                background: #ff9710;
+                                &::after{
+                                    content: "";
+                                    border-width: 5px;
+                                    border-style: solid;
+                                    border-color: #ff9000 transparent transparent transparent;
+                                    position: absolute;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    bottom: -10px;
+                                    z-index: 999;
+                                }
+                            }
+                        }
+                    }
+                    .detailcontent{
+                        .price-ratio{
+                            padding: 10px 0;
+                            // .mui-navigate-right{
+                            //     display: flex;
+                            //     justify-content: space-between;
+                            //     align-items: center;
+                            // }
+                            // .left{
+                            //     display: flex;
+                            //     flex-direction: column;
+                            //     justify-content: space-around;
+                            //     .title{
+                            //         font-size: 14px;
+                            //         vertical-align: middle;
+                            //     }
+                            //     .self{
+                            //         margin-top: 5px;
+                            //         color: #a2a2a2;
+                            //     }
+                            // }
+                            // .right{
+                            //     padding-right: 20px;
+                            //     color: #fe1313;
+                            //     font-size: 16px;
+                            // }
+                        }
+                        .evaluate{
+                            display: none;
+                            .box{
+                                display: flex;
+                                flex-direction: column;
+                                .up-part{
+                                    height: 35px;
+                                    background: #ddd;
+                                    p{
+                                        line-height: 35px;
+                                        text-align: center;
+                                        color: #000;
+                                    }
+                                }
+                                .down-part{
+                                    flex: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    background: #fff;
+                                    border-bottom: 1px solid #ddd;
+                                    padding: 4px 5px;
+                                    p{
+                                        line-height: 24px;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        .stars{
+                                         i{
+                                            color: $bgColor; 
+    
+                                         }
+                                        }
+                                    }
+                                    .text{
+                                        font-size: 16px;
+                                        color: #000;
+                                    }
+                                    .reply{
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+}

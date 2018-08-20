@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价</title>
+
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+
+    <link rel="stylesheet" href="../css/baiCaiJia.css">
+    <script src="../js/baiCaiJia.js"></script>
+</head>
+<body>
+    <div class="all">
+        <header>
+            <div class="top">
+                <a href="#" class="mui-icon mui-icon-back"></a>
+                <p class="title" style="color: #ffffff;">白菜价-淘宝内部券</p>
+                <a href="#" class="mui-icon mui-icon-download"></a>
+            </div>
+            <div class="bottom">
+                <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                    <div class="mui-scroll proTitle">
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <ul class="data">
+                        
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="top">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+                <a href="#">返回顶部</a>
+            </div>
+            <div class="bottom">
+                <div class="link">
+                    <span class="app">手机APP下载</span>
+                    <span class="phone">慢慢买手机版</span>
+                    <span class="pingTai">--掌上比价平台</span>
+                </div>
+                <div class="com">m.manmanbuy.com</div>
+            </div>
+        </footer>
+    </div>  
+</body>
+</html>
+
+<script id="ProductData" type="text/html">
+    {{ each list v i}}
+    <li>
+        <div class="left">
+            {{@v.productImg}}
+        </div>
+        <div class="right">
+            <p>{{@v.productName}}</p>
+            <div class="jiaGe">{{@v.productPrice}}</div>
+            <div class="youHuiQuan">{{@v.productCouponRemain}}</div>
+            <div class="get">
+                {{@v.productCoupon}}
+                {{@v.productHref}}
+            </div>
+        </div>
+    </li>
+    {{ /each }}
+</script>
+
+<script id="info" type="text/html">
+    {{ each list v i}}
+    <a class="mui-control-item {{ if i==0 }}mui-active{{ /if }}" data-id="{{ v.titleId }}">
+        {{ v.title }}
+    </a>
+    {{ /each }}
+</script>
